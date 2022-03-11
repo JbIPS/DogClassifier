@@ -1,0 +1,6 @@
+*.h5
+__pycache__
+.venv-p6
+.ipynb_checkpoints/
+Images/
+app/backend/naive_model/
