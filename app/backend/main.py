@@ -16,7 +16,7 @@ image_size = (180, 180)
 
 app = FastAPI()
 
-model = keras.models.load_model('naive_model')
+model = keras.models.load_model('Best xception')
 
 
 @app.get("/prediction")

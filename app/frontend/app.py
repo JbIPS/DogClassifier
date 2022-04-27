@@ -28,7 +28,9 @@ def main():
     if predict_btn:
         pred = request_prediction(API_URI, url)
         main_race = pred[0].split(' at')[0].lower()
-        main_race = '/'.join(reversed(main_race.split(' ')))
+        main_race = '/'.join(reversed(main_race.replace('-', '').split(' ')))
+        if main_race.startswith('husky'):
+            main_race = main_race.split('/')[0]
         col1, col2 = st.columns(2)
         with col1:
             st.image(url)
